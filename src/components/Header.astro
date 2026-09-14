@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import logo from '@images/logo-2x.png';
+import menu from '@images/menu.svg';
+import menuClose from '@images/menu-close.svg';
+
+// Phrase strings
+let strSkipMain = 'Skip to Main Content'
+let strSkipNav = 'Skip to Navigation'
+let strSkipAccess = 'Accessibility Statement'
+let strLogo = 'Government of British Columbia'
+let strSite = 'Website name'
+let strOpen = 'Open Menu'
+let strClose = 'Close Menu'
+---
+
+<header class="header">
+    <div class="header__accessibility">
+        <a href="#main" class="btn btn--hivis">{strSkipMain}</a>
+        <a href="#primaryNav" class="btn btn--hivis">{strSkipNav}</a>
+        <a href="https://www2.gov.bc.ca/gov/content/home/accessible-government" target="_blank" class="btn btn--hivis">{strSkipAccess}</a>
+    </div>
+    <div class="container header__row">
+        <div class="header__row--left">
+            <a href="http://www2.gov.bc.ca/">
+                <Image src={logo} alt={strLogo} class="header__logo" />
+            </a>
+            <p class="header__title"><a href="#">{strSite}</a></p>
+        </div>
+        <div class="header__row--right">
+            <button id="navBtn" class="header__nav-button" aria-label={strOpen} aria-expanded="false" aria-controls="primaryNav">
+                <Image src={menu} alt={strOpen} />
+            </button>
+        </div>
+    </div>
+    <nav id="primaryNav" class="header__nav hidden">
+        <div class="container header__nav__row">
+            <button id="navCloseBtn" class="header__nav-button" aria-label={strClose}>
+                <Image src={menuClose} alt={strClose} />
+            </button>
+            <ul class="header__nav__list small">
+                <li><a href="#">Nav item</a></li>
+                <li><a href="#">Nav item</a></li>
+                <li><a href="#">Nav item</a></li>
+                <li><a href="#">Nav item</a></li>
+                <li><a href="#">Nav item</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script src="@scripts/main.js"></script>
