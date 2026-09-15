@@ -6,11 +6,9 @@ import '@styles/main.css';
 let { title, desc, frontmatter } = Astro.props;
 let seoTitle = title;
 const shareImage = " "; // needs to be a full URL
-const currentUrl = Astro.url;
-const currentPath = currentUrl.pathname;
 const isProd = import.meta.env.PROD;
 
-// Update props if using a markdown page
+// Update props for markdown pages
 frontmatter && (
     title = frontmatter.pageTitle,
     desc = frontmatter.description
@@ -39,6 +37,7 @@ frontmatter && (
 		<meta name="twitter:title" content={seoTitle} />
 		<meta name="twitter:description" content={desc} />
 		<meta name="twitter:image" content={shareImage} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		{isProd && (<script type="text/javascript">
 			; (function (p, l, o, w, i, n, g) {
 				if (!p[i]) {

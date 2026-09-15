@@ -1,6 +1,6 @@
 # BCGov Astro Starter
 
-An Astro website boilerplate to use as a starting point for Astro sites. 
+An Astro boilerplate to use as a starting point for static sites in the B.C. Government.
 
 Supports simple static websites with:
 - basic starter styles
@@ -44,6 +44,12 @@ Inside of the project, you'll see the following folders and files:
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 Learn about [building websites with Astro](https://docs.astro.build/)
+
+## Required Configurations
+
+- `site` must be set to the production URL in `/astro.config.mjs` for the sitemap
+- `shareImage` should be set in `/src/layouts/Layout.astro` to set a site-wide social share / open graph imaage
+- `pageTitle` and `description` must be specified for each page to set correct metadata and open graph data
 
 ## Commands
 
