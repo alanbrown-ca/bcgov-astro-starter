@@ -48,7 +48,7 @@ Learn about [building websites with Astro](https://docs.astro.build/)
 ## Required Configurations
 
 - `site` must be set to the production URL in `/astro.config.mjs` for the sitemap
-- `shareImage` should be set in `/src/layouts/Layout.astro` to set a site-wide social share / open graph imaage
+- `shareImage` should be set in `/src/layouts/Layout.astro` to set a site-wide social share / open graph image
 - `pageTitle` and `description` must be specified for each page to set correct metadata and open graph data
 
 ## Commands
