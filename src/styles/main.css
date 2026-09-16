@@ -152,7 +152,7 @@ body {
 /* view transitions */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
-      navigation: auto;
+    navigation: auto;
   }
 }
 
@@ -347,6 +347,7 @@ hr {
 }
 
 .header__logo {
+  display: block;
   width: 100%;
   max-width: 190px;
   height: auto;
